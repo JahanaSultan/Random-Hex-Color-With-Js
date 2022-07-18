@@ -2,8 +2,9 @@ let main = document.querySelector('.main')
 let code = document.querySelector('.code')
 let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f']
 
-var stopbtn = document.querySelector('.btnstop')
+
 var startbtn = document.querySelector('.btnstart')
+var stopbtn = document.querySelector('.btnstop')
 
 const randomColor = () => {
   let empty = []
@@ -24,7 +25,15 @@ function myfunction() {
 
 startbtn.addEventListener('click', () => {
   myfunction()
+  startbtn.style.opacity="0"
+  startbtn.style.zIndex="-100"
+  stopbtn.style.opacity="1"
+  stopbtn.style.zIndex="100"
 })
 stopbtn.addEventListener('click', () => {
   clearInterval(x)
+  stopbtn.style.opacity="0"
+  stopbtn.style.zIndex="-100"
+  startbtn.style.opacity="1"
+  startbtn.style.zIndex="100"
 })
