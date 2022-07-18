@@ -21,10 +21,16 @@
   font-size: 35px;
   color: aliceblue;
   background-color: black;
+  border-radius: 100vmax;
 }
 button{
-  margin: 10px 0;
   width: 100px;
   height: 40px;
   cursor: pointer;
+  border: 1px solid black;
+  background: transparent;
+  border-radius: 100vmax;
+}
+button:first-of-type{
+margin: 25px 0 5px 0;
 }
