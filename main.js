@@ -37,3 +37,19 @@ stopbtn.addEventListener('click', () => {
   startbtn.style.opacity="1"
   startbtn.style.zIndex="100"
 })
+
+
+code.addEventListener("click",()=>{
+  navigator.clipboard.writeText(code.innerText);
+  code.innerHTML=`Copied <i class="fa-solid fa-check"></i>`
+
+})
+
+let p=document.querySelector(".main p")
+
+code.addEventListener("mouseover",()=>{
+  p.classList.add("display")
+})
+code.addEventListener("mouseout",()=>{
+  p.classList.remove("display")
+})
